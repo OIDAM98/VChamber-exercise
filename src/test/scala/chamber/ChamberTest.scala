@@ -36,7 +36,27 @@ class ChamberTest extends AnyFunSpec with Matchers {
           Chamber("...").animate(1) should equal(output)
         }
         it("Case 5") {
-          val output = Array("..X....", "....X..", "......X", ".......")
+          val output = Array(
+            "XXXX.XX.XXX.X.XXXX.",
+            "..XXX..X..XX.X..XX.",
+            ".X.XX.X.X..XX.XX.XX",
+            "X.X.XX...X.XXXXX..X",
+            ".X..XXX...X..XX.X..",
+            "X..X..XX.X.XX.XX.X.",
+            "..X....XX..XX..XX.X",
+            ".X.....XXXX..X..XX.",
+            "X.....X..XX...X..XX",
+            ".....X..X.XX...X..X",
+            "....X..X...XX...X..",
+            "...X..X.....XX...X.",
+            "..X..X.......XX...X",
+            ".X..X.........XX...",
+            "X..X...........XX..",
+            "..X.............XX.",
+            ".X...............XX",
+            "X.................X",
+            "..................."
+          )
           Chamber("LRRL.LR.LRR.R.LRRL.").animate(1) should equal(output)
         }
       }
