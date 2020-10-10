@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
       )
     ),
     name := "chamber-exercise",
-    libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.2.2" % Test)
+    libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.2.2")
   )
   .aggregate(docker)
 
@@ -28,6 +28,6 @@ lazy val docker = (project in file("."))
     dockerBaseImage := "openjdk:8u201-jre-alpine3.9",
     dockerUpdateLatest := true,
     libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "3.2.2" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.2",
     )
   )
